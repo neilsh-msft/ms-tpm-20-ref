@@ -33,6 +33,7 @@
 
 #pragma once
 #include <wchar.h>
+#include <stdint.h>
 
 #ifndef CONST
 #define CONST               const
@@ -73,15 +74,16 @@ typedef unsigned int        UINT;
 typedef unsigned int        UINT32;
 typedef long                LONG;
 typedef unsigned long       ULONG;
-typedef unsigned long       DWORD;
 typedef long long           LONGLONG;
-typedef long long           LONG64;
-typedef long long           RtlINT64;
 typedef unsigned long long  ULONGLONG;
 typedef unsigned long long  DWORDLONG;
-typedef unsigned long long  ULONG64;
-typedef unsigned long long  DWORD64;
-typedef unsigned long long  UINT64;
+
+typedef uint32_t            DWORD;
+typedef int64_t             LONG64;
+typedef int64_t             INT64;
+typedef uint64_t            ULONG64;
+typedef uint64_t            DWORD64;
+typedef uint64_t            UINT64;
 
 #ifdef _WIN64
 typedef signed long long    INT_PTR;
